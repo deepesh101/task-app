@@ -3,7 +3,7 @@ import { Typography, Grid, TextField } from '@mui/material'
 import { withStyles } from '@mui/styles'
 import { DatePicker, LocalizationProvider } from '@mui/lab'
 import AdapterDateFns from '@mui/lab/AdapterDateFns'
-import { CustomButtonComplete, StyledPaper } from './customComponents'
+import { CustomButtonCreate, StyledPaper } from './customComponents'
 
 const styles = () => ({
     header: {
@@ -103,7 +103,7 @@ const TaskManager = props => {
                         </LocalizationProvider>
                     </Grid>
                     <Grid item>
-                        <CustomButtonComplete variant='contained' className={classes.btn} onClick={handleSubmit}>Create Task</CustomButtonComplete>
+                        <CustomButtonCreate variant='contained' className={classes.btn} onClick={handleSubmit}>Create Task</CustomButtonCreate>
                     </Grid>
                 </Grid>
             </Grid>

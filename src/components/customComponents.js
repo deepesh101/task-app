@@ -19,6 +19,15 @@ export const CustomButtonDelete = styled(Button)({
     }
 })
 
+export const CustomButtonCreate = styled(Button)({
+    backgroundColor: '#003979',
+    textTransform: 'none',
+    width: 'auto',
+    '&:hover': {
+        backgroundColor: '#003979e2'
+    }
+})
+
 export const StyledPaper = styled(Paper)({
     boxShadow: '3px 3px 10px 2px #00000022'
 })
