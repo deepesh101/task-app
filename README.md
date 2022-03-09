@@ -1,6 +1,6 @@
 # Live URL
 
-Check out the live app: [Click Here](https://task-app-deepesh.netlify.app)
+Check out the live app: [Click Here](https://task-app-deepesh101.vercel.app)
 
 # Getting Started with Create React App
 
