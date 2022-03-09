@@ -1,25 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import TaskList from './components/TaskList';
+import { Grid } from '@mui/material'
+import { withStyles } from '@mui/styles'
+import TaskManager from './components/TaskManager';
+import { useState } from 'react';
 
-function App() {
+const styles = () => ({
+  root: {
+    margin: '0px 30px',
+    width: '80%'
+  },
+  mainGrid: {
+    width: '100%'
+  }
+})
+
+const App = props => {
+  const { classes } = props
+  const [tasks, setTasks] = useState([])
+  const addTask = task => {
+    setTasks(preVal => [...preVal, task])
+  }
+  const deleteTask = index => {
+    const newTaskList = tasks.filter((t, i) => i !== index)
+    setTasks(newTaskList)
+  }
+  const markCompleted = index => {
+    const prevTasks = tasks
+    prevTasks[index].completed = true
+    console.log(prevTasks)
+    setTasks(prevTasks)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid container direction='column' spacing={10} className={classes.mainGrid} alignItems='center'>
+      <Grid item>
+        <TaskManager addTask={addTask} />
+      </Grid>
+      <Grid item className={classes.root}>
+        <TaskList tasks={tasks} deleteTask={deleteTask} markCompleted={markCompleted} />
+      </Grid>
+    </Grid>
   );
 }
 
-export default App;
+export default withStyles(styles)(App);
