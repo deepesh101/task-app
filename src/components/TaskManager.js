@@ -103,7 +103,7 @@ const TaskManager = props => {
                         </LocalizationProvider>
                     </Grid>
                     <Grid item>
-                        <CustomButtonComplete variant='contained' className={classes.btn} onClick={handleSubmit}>Add Task</CustomButtonComplete>
+                        <CustomButtonComplete variant='contained' className={classes.btn} onClick={handleSubmit}>Create Task</CustomButtonComplete>
                     </Grid>
                 </Grid>
             </Grid>
