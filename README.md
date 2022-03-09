@@ -1,8 +1,8 @@
 # Live URL
 
-Check out the live app:
+Check out the live app:\
+[Netlify](https://task-app-deepesh.netlify.app)\
 [Vercel](https://task-app-deepesh101.vercel.app)
-[Netlify](https://task-app-deepesh.netlify.app)
 
 # Getting Started with Create React App
 
